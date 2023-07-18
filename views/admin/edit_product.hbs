@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row" style="display: flex;justify-content: right;">
+        <a href="/admin" class="btn btn-success m-2">Go to Products Page</a>
+    </div>
+    <form class="bg-dark p-5" action="/admin/edit-product/{{product._id}}" style="border-radius: 10px;"
+        enctype="multipart/form-data" method="post" autocomplete="off">
+        <div class="form-group">
+            <div class="row text-center" style="display: flex;justify-content: center;color: #ffff;">
+                <h1>Edit Product</h1>
+            </div>
+            <label class="text-white">Product Name</label>
+            <input type="text" class="form-control" value="{{product.Name}}" placeholder="example i phone" name="Name">
+        </div>
+        <div class="form-group">
+            <label class="text-white">Description</label>
+            <input type="text" class="form-control" placeholder="this is Good" value="{{product.Description}}"
+                name="Description">
+        </div>
+        <div class="form-group">
+            <label class="text-white">Price</label>
+            <input type="number" class="form-control" placeholder="Price in Amount ₹" name="Price"
+                value="{{product.Price}}">
+        </div>
+        <div class="form-group">
+            <label class="text-white">Category</label>
+            <input type="text" class="form-control" placeholder="eg mobile" name="Category"
+                value="{{product.Category}}">
+        </div>
+        <img src="/images/Shopping-Images/{{product._id}}.jpg" alt=""
+            style="width: 70px;height: 75px; border-radius: 5px;" id="Image">
+        <div class="form-group">
+            <label class="text-white">Image</label>
+            <input type="file" class="form-control" name="Image" onchange="ImgChange(event)">
+        </div>
+        <button type="submit" class="btn btn-success">Update</button>
+    </form>
+</div>
+<script>
+    function ImgChange(event) {
+      // {{!-- document.querySelector('#Image'). --}}
+       document.getElementById("Image").src=URL.createObjectURL(event.target.files[0])
+    }
+</script>

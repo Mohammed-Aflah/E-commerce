@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row text-center mt-5" style="display: flex;justify-content: center;">
+        <h1 class="text-center" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Login Now</h1>
+    </div>
+    <form class="bg-dark p-5 mt-3 w-50" action="/login" style="border-radius: 10px;margin:auto" method="post"
+        autocomplete="off">
+        {{#if loggedErr}}
+            <h6 class="text-danger text-center">{{loggedErr}}</h6>
+        {{/if}}
+        <div class="form-group">
+            <label class="text-white">Email</label>
+            <input type="email" class="form-control" name="Email" placeholder="example@gmail.com">
+        </div>
+        <div class="form-group">
+            <label class="text-white">Password</label>
+            <input type="password" class="form-control" name="Password" placeholder="Enter Password">
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+            <div class="col-md-6" style="text-align: right;">
+                <a href="/signup" class="ml-auto">Signup now</a>
+            </div>
+        </div>
+
+
+    </form>
+</div>

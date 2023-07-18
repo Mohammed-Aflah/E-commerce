@@ -1,0 +1,40 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 26px;">Aflu Shoppy</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="/">Products <span class="sr-only">(current)</span></a>
+
+                {{#if user}}
+                <a class="nav-item nav-link" href="#">Orders</a>
+                {{/if}}
+                <a class="nav-item nav-link" href="/cart">Cart</a>
+
+            </div>
+
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                {{#if user}}
+                {{user.Name}}
+                {{else}}
+                Account
+                {{/if}}
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+
+                {{#if user}}
+                <a class="dropdown-item" href="/logout">Logout</a>
+                {{else}}
+                <a class="dropdown-item" href="/login">Login</a>
+                {{/if}}
+
+            </div>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <a href="/admin" class="btn btn-success m-2 ml-auto">Go to Products Page</a>
+    </div>
+    <form class="bg-secondary p-5 mt-3" action="/admin/Add-product" style="border-radius: 10px;" enctype="multipart/form-data" method="post" autocomplete="off">
+        <div class="form-group">
+            <label class="text-white">Product Name</label>
+            <input type="text" class="form-control" placeholder="example i phone" name="Name">
+        </div>
+        <div class="form-group">
+            <label class="text-white">Description</label>
+            <input type="text" class="form-control" placeholder="this is Good" name="Description">
+        </div>
+        <div class="form-group">
+            <label class="text-white">Price</label>
+            <input type="number" class="form-control" placeholder="Price in Amount ₹" name="Price">
+        </div>
+        <div class="form-group">
+            <label class="text-white">Category</label>
+            <input type="text" class="form-control" placeholder="eg mobile" name="Category">
+        </div>
+        <div class="form-group">
+            <label class="text-white">Image</label>
+            <input type="file" class="form-control" name="Image">
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
